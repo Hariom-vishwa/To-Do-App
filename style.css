@@ -1,9 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Hammersmith+One&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nabla:EDPT,EHLT@30..200,24&display=swap");
 
 :root {
-  --pri-col: #009900;
-  --sec-col: #fdf1d7;
-  --another-col:rgba(176, 224, 230, 0.436);
+  --pri-col: #4caf50;
+  --sec-col: #f8f5f1;
+  --another-col: rgba(220, 228, 234, 0.7);
   --font: "Hammersmith One", serif;
 }
 
@@ -14,16 +15,15 @@
   font-family: var(--font);
   user-select: none;
   transition: all ease 0.5s;
-  /* border: 1px solid; */
 }
 
 body {
   width: 100vw;
   height: 100vh;
-  display: grid;
-  place-items: center;
+  padding: 2vw;
   overflow: hidden;
   background: linear-gradient(135deg, var(--another-col), rgb(168, 149, 168));
+  position: relative;
 }
 
 @media screen and (max-width: 500px) {
@@ -66,10 +66,10 @@ body {
   .cont ul {
     width: 100%;
     max-height: 68.5vh;
-    /* border-radius: 2vw; */
     display: flex;
     flex-direction: column;
-    gap: 1vw;
+    gap: 1.5vw;
+    border-radius: 2vw;
   }
 
   .cont ul::-webkit-scrollbar {
@@ -88,14 +88,23 @@ body {
 
   .cont li {
     padding: 2vw 10vw;
+    margin: 0 0 6vw 0;
     word-wrap: break-word;
-    border-radius: 2vw 0 2vw 2vw;
+  }
+
+  .cont ul li div {
+    width: auto;
+    height: 6vw;
+    font-size: 2.5vw;
+    padding: 0 2vw;
+    bottom: -65%;
+    border-radius: 0 0 2vw 2vw;
   }
 }
 
 @media screen and (min-width: 900px) {
   .cont {
-    min-width: 50vw;
+    width: 50vw;
     max-width: 90vw;
     border-radius: 1vw;
     padding: 1vw;
@@ -134,16 +143,16 @@ body {
     flex-direction: column;
     gap: 0.5vw;
   }
-  
+
   .cont ul::-webkit-scrollbar {
     width: 0.5vw;
   }
-  
+
   .cont ul::-webkit-scrollbar-track {
     background-color: transparent;
     border-radius: 0 2vw 2vw 0;
   }
-  
+
   .cont ul::-webkit-scrollbar-thumb {
     background-color: var(--pri-col);
     border-radius: 0 2vw 2vw 0;
@@ -151,12 +160,23 @@ body {
 
   .cont li {
     padding: 12px 60px;
+    margin: 0 0 35px 0;
+  }
+
+  .cont ul li div {
+    width: auto;
+    height: 31px;
+    font-size: 13px;
+    padding: 0 1vw;
+    bottom: -65%;
+    border-radius: 0 0 10px 10px;
   }
 }
 
 .cont {
   min-height: 15vh;
   max-height: 90vh;
+  margin: auto;
   background-color: var(--sec-col);
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
@@ -203,7 +223,7 @@ body {
 }
 
 .cont li {
-  background-color:var(--another-col);
+  background-color: var(--another-col);
   list-style: none;
   font-size: large;
   user-select: none;
@@ -243,10 +263,19 @@ body {
   border-radius: 50%;
   position: absolute;
   right: 10px;
-  top: 4px;
+  top: 9px;
   color: #000;
 }
 .cont ul li span:hover {
   background-color: var(--pri-col);
   color: var(--sec-col);
+}
+
+.cont ul li div {
+  content: "";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 0;
 }

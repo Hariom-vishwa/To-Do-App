@@ -9,6 +9,7 @@
     <link rel="shortcut icon"
         href="https://imgcdn.stablediffusionweb.com/2024/3/9/5b07779d-037a-4561-80cd-44f74cd04388.jpg"
         type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -18,6 +19,17 @@
             <div class="row">
                 <input id="input" type="text" placeholder="Enter your tasks here...">
                 <button onclick="addTask()">Add Task</button>
+            </div>
+            <div id="countCont">
+                <span>
+                    <i class="ri-list-check-3"></i> <h3 id="taskCount">Total Tasks: 0</h3>
+                </span>
+                <span>
+                    <i class="ri-loader-4-line"></i> <h3 id="remainingTasks">Remaining Tasks: 0</h3>
+                </span>
+                <span>
+                    <i class="ri-task-line"></i> <h3 id="completedTasks">Completed Tasks: 0</h3>
+                </span>
             </div>
 
             <ul class="list-cont">
